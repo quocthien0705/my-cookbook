@@ -9,6 +9,9 @@
 - [x] Add light and dark theme foundations
 - [x] Create prototype application layout
 - [x] Create prototype navigation
+- [x] Create prototype homepage
+- [x] Create prototype recipe cards
+- [x] Create prototype category archive
 - [x] Set up GitHub repository
 - [x] Deploy an initial version to GitHub Pages
 
@@ -18,17 +21,23 @@ direction. They are not yet ready to support the complete recipe experience or p
 ## Phase 2: Cookbook
 
 - [ ] Finalize application layout and navigation
-- [x] Create prototype homepage
-- [x] Create prototype recipe cards
+- [ ] Finalize responsive prototype behavior for desktop and mobile browsers
+- [ ] Finalize prototype homepage
+- [ ] Finalize prototype recipe browsing and cards
 - [ ] Create recipe detail page
+- [ ] Finalize prototype category
+- [ ] Add recipe creation from the web interface
+- [ ] Add local recipe saving workflow for the prototype
 - [x] Add local sample recipe data
 - [x] Add temporary recipe images
-- [x] Create prototype category archive
 - [ ] Add tags
-- [x] Make the prototype responsive
+- [ ] Refine the prototype for common phone and tablet screen sizes
 
 The completed items in this phase are placeholders for visual direction. They are not complete
-product features and do not yet persist user data.
+product features and do not yet persist user data. Phase 2 should feel like a usable prototype,
+including the ability to add recipes directly in the web app even if the data is still local-only.
+The prototype should also feel complete across the main screens: Home, Recipes, Categories/Tags,
+and Search.
 
 ## Phase 3: Nutrition
 
@@ -59,6 +68,7 @@ product features and do not yet persist user data.
 - [ ] Add micro-interactions
 - [ ] Improve recipe reading experience
 - [ ] Improve mobile interactions
+- [ ] Validate all core pages on desktop and mobile browser sizes
 - [ ] Optimize animation and performance
 
 ## Phase 6: Recipe Management
