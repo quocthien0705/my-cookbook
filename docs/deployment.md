@@ -2,8 +2,20 @@
 
 The initial deployment target is GitHub Pages.
 
-Before deployment, configure a GitHub Actions workflow to build the Vite application and publish its
-`dist` output. The current browser-path navigation also needs a static-hosting fallback so direct
-visits to `/recipes/`, `/categories/`, and `/search/` do not return a 404 page.
+Repository Pages URL:
+`https://quocthien0705.github.io/my-cookbook/`
 
-This will be addressed when the project is ready for its first deployment.
+Deployment checklist:
+
+1. Set the Vite production base path to `/my-cookbook/`.
+2. Keep the app router aware of the Vite base path so local development and GitHub Pages both work.
+3. Add a `public/404.html` fallback for direct visits to recipe pages and other nested routes.
+4. Use a GitHub Actions workflow to build `dist` and publish it to GitHub Pages.
+
+GitHub setup still needed:
+
+1. Open repository settings.
+2. Go to `Settings` > `Pages`.
+3. Select `GitHub Actions` as the source.
+4. Commit and push the workflow from `main`.
+5. Wait for the first workflow run to finish.

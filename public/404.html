@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Cookbook</title>
+    <script>
+      (function () {
+        var siteBase = '/my-cookbook/';
+        var path = window.location.pathname;
+        var relativePath = path.indexOf(siteBase) === 0 ? path.slice(siteBase.length) : path.replace(/^\//, '');
+        var normalizedRoute = '/' + relativePath.replace(/\/+$/, '');
+
+        if (normalizedRoute === '/') {
+          normalizedRoute = '/';
+        }
+
+        var target = siteBase + '?route=' + encodeURIComponent(normalizedRoute);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -7,12 +7,20 @@ import { SearchPage } from '../pages/SearchPage';
 type Theme = 'light' | 'dark';
 type Page = 'home' | 'recipes' | 'categories' | 'search';
 
-const pagePaths: Record<Page, string> = {
-  home: '/',
-  recipes: '/recipes/',
-  categories: '/categories/',
-  search: '/search/',
+const pageSlugs: Record<Page, string> = {
+  home: '',
+  recipes: 'recipes',
+  categories: 'categories',
+  search: 'search',
 };
+
+const appBasePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+function getPagePath(page: Page) {
+  const slug = pageSlugs[page];
+
+  return `${appBasePath}/${slug}${slug ? '/' : ''}`;
+}
 
 function getInitialTheme(): Theme {
   const savedTheme = window.localStorage.getItem('theme');
@@ -25,7 +33,10 @@ function getInitialTheme(): Theme {
 }
 
 function getPageFromPath(): Page {
-  const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+  const fallbackRoute = new URLSearchParams(window.location.search).get('route');
+  const fullPath = fallbackRoute ?? window.location.pathname;
+  const relativePath = fullPath.startsWith(appBasePath) ? fullPath.slice(appBasePath.length) : fullPath;
+  const pathname = relativePath.replace(/\/+$/, '') || '/';
 
   if (pathname === '/recipes') return 'recipes';
   if (pathname === '/categories') return 'categories';
@@ -59,13 +70,25 @@ function App() {
     return () => window.removeEventListener('scroll', updateScrollState);
   }, []);
 
+  useEffect(() => {
+    const fallbackRoute = new URLSearchParams(window.location.search).get('route');
+
+    if (!fallbackRoute) {
+      return;
+    }
+
+    window.history.replaceState({}, '', getPagePath(getPageFromPath()));
+  }, []);
+
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
   };
 
   const navigate = (nextPage: Page) => {
-    if (window.location.pathname !== pagePaths[nextPage]) {
-      window.history.pushState({}, '', pagePaths[nextPage]);
+    const nextPath = getPagePath(nextPage);
+
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState({}, '', nextPath);
     }
 
     setPage(nextPage);
