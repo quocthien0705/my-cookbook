@@ -9,8 +9,8 @@
 - [x] Add light and dark theme foundations
 - [x] Create prototype application layout
 - [x] Create prototype navigation
-- [ ] Set up GitHub repository
-- [ ] Deploy an initial version to GitHub Pages
+- [x] Set up GitHub repository
+- [x] Deploy an initial version to GitHub Pages
 
 The layout and navigation currently visible in the app are an early prototype for testing the design
 direction. They are not yet ready to support the complete recipe experience or production deployment.
