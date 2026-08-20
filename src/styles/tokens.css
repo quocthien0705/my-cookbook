@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --color-canvas: #fbf8f2;
+  --color-surface: #fffdfa;
+  --color-ink: #2b2118;
+  --color-on-ink: #fffaf1;
+  --color-muted: #675c50;
+  --color-accent: #8b5b17;
+  --color-accent-soft: #f2e6d2;
+  --color-border: #ded6c9;
+  --color-focus: #795016;
+  --color-header-line: rgba(139, 91, 23, 0.38);
+  --color-header-glow: rgba(235, 181, 90, 0.55);
+  --color-wash: rgba(139, 91, 23, 0.12);
+  --color-wash-subtle: rgba(92, 107, 69, 0.07);
+  --color-toggle-shadow: #fff2c7;
+  --radius-card: 28px;
+  --radius-pill: 999px;
+  --shadow-card: 0 24px 70px rgba(70, 48, 25, 0.13);
+  --shadow-button: 0 10px 22px rgba(43, 33, 24, 0.2);
+  --shadow-button-hover: 0 14px 28px rgba(43, 33, 24, 0.27);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-canvas: #211a15;
+  --color-surface: #2b231c;
+  --color-ink: #f5ecdd;
+  --color-on-ink: #211a15;
+  --color-muted: #cfc0ac;
+  --color-accent: #e2a84d;
+  --color-accent-soft: #4a3927;
+  --color-border: #4b3e31;
+  --color-focus: #f0bd65;
+  --color-header-line: rgba(226, 168, 77, 0.42);
+  --color-header-glow: rgba(255, 211, 128, 0.58);
+  --color-wash: rgba(226, 168, 77, 0.13);
+  --color-wash-subtle: rgba(168, 181, 138, 0.1);
+  --color-toggle-shadow: #6a512f;
+  --shadow-card: 0 24px 70px rgba(0, 0, 0, 0.27);
+  --shadow-button: 0 10px 22px rgba(0, 0, 0, 0.3);
+  --shadow-button-hover: 0 14px 28px rgba(0, 0, 0, 0.4);
+}

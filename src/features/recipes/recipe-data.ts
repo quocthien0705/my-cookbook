@@ -1,0 +1,58 @@
+import type { Recipe } from './recipe.types';
+
+export const recipes: Recipe[] = [
+  {
+    id: 'tomato-basil-pasta',
+    title: 'Slow-roasted tomato and basil pasta',
+    category: 'Pasta',
+    description: 'Sweet tomatoes, torn basil, and a little pasta water make a generous weeknight bowl.',
+    time: '35 min',
+    difficulty: 'Easy',
+    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    id: 'golden-lentil-soup',
+    title: 'Golden lentil soup with lemon',
+    category: 'Soup',
+    description: 'A bright, silky pot of lentils finished with lemon and toasted cumin.',
+    time: '45 min',
+    difficulty: 'Easy',
+    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    id: 'garden-salad',
+    title: 'Crunchy garden salad with herbs',
+    category: 'Salad',
+    description: 'Crisp leaves, shaved vegetables, and a sharp shallot vinaigrette.',
+    time: '20 min',
+    difficulty: 'Easy',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    id: 'summer-peach-cake',
+    title: 'Summer peach and almond cake',
+    category: 'Baking',
+    description: 'A tender olive-oil cake for late summer fruit and long, slow afternoons.',
+    time: '1 hr 10 min',
+    difficulty: 'Medium',
+    image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    id: 'mushroom-toast',
+    title: 'Garlic mushrooms on crisp toast',
+    category: 'Breakfast',
+    description: 'Deeply savory mushrooms, a soft egg, and good toast for a slow morning.',
+    time: '25 min',
+    difficulty: 'Easy',
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    id: 'lemon-chicken',
+    title: 'Lemon chicken with green olives',
+    category: 'Dinner',
+    description: 'A one-pan dinner with roasted lemon, thyme, and a salty olive finish.',
+    time: '50 min',
+    difficulty: 'Medium',
+    image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1200&q=85',
+  },
+];
